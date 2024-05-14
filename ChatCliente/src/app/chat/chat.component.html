@@ -1,0 +1,32 @@
+<!--
+<p>chat works!</p>
+<div>
+  <ul>
+    <li *ngFor="let m of messages">{{ m }}</li>
+  </ul>
+  <input [(ngModel)]="message" (keydown.enter)="sendMessage()" type="text">
+  <button (click)="sendMessage()">Send</button>
+-->
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat en tiempo real</title>
+
+</head>
+
+<body>
+
+  <section id="chat">
+    <ul id="messages">
+      <li *ngFor="let m of messages">{{ m }}</li>
+    </ul>
+    <form id="form">
+      <input type="text" name="message" id="input" placeholder="Escribir un mensaje" autocomplete="off" [(ngModel)]="message" (keydown.enter)="sendMessage()"/>
+      <button type="submit" (click)="sendMessage()">Enviar</button>
+    </form>
+  </section>
+
+
+</body>
